@@ -1,0 +1,97 @@
+<% layout("/layouts/boilerplate") %>
+
+    <style>
+        .tax-info {
+            display: none;
+        }
+        .tax-toggle {
+            border: 1px solid black;
+            border-radius: 1rem;
+            height: 3.5rem;
+            padding: 1rem;
+            margin : 10px;
+            margin-left: auto;
+            width: 300px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        
+        
+    </style>
+ 
+        <div class="tax-toggle">
+        <div class="form-check-reverse form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
+        </div>
+        </div>
+
+
+    <h3>All listings</h3>
+    <!-- <form action="/listings/new" method="GET">
+        <button>Create New Listing</button>
+    </form> -->
+    
+    
+
+    <div class="row row-cols-lg-3 row-col-md-3 row-cols-sm-1">
+        <% for(let listing of allListings) { %>
+            <a href="/listings/<%= listing._id %>" class="listing-link">
+
+                <div class="card col listing-card">
+                    <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"
+                    style="height: 20rem">
+
+                    <div class="card-img-overlay"></div>
+
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b><%= listing.title %></b> 
+                            <br>
+                            &#8377; <%= listing.price.toLocaleString("en-IN") %> /night 
+                            <i class="tax-info">&nbsp; &nbsp;+18% GST</i>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </a>
+    
+        <% } %>
+    </div>
+
+
+
+<script>
+    let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+    taxSwitch.addEventListener("click", () => {
+        let taxInfo = document.getElementsByClassName("tax-info");
+        for(info of taxInfo) {
+            if(info.style.display != "inline"){
+                info.style.display = "inline";
+            }
+            else{
+                info.style.display = "none";
+            }
+            
+        }
+    });
+
+    // Search functionality
+    let searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", () => {
+        let searchValue = searchInput.value.toLowerCase();
+        let allListings = document.querySelectorAll(".listing-link");
+        
+        allListings.forEach(listing => {
+            let title = listing.querySelector(".card-text b").textContent.toLowerCase();
+            if(title.includes(searchValue)) {
+                listing.style.display = "block";
+            } else {
+                listing.style.display = "none";
+            }
+        });
+    });
+</script>
+
+ 

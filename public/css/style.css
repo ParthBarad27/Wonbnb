@@ -1,0 +1,213 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links {
+    text-decoration: none;
+    color: 222222;
+}
+
+.f-info-links a :hover{
+    text-decoration: underline;
+}
+
+.f-info-links, 
+.f-info-socials,
+.f-info-brand{
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+     font-size: 1.2rem;
+     margin-right: 1rem;
+}
+
+
+.f-info {
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebed;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+
+}
+
+/* Cards */
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+
+}
+
+.card-img-top {
+    border-radius: 1rem;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0;
+
+}
+
+.card-text p {
+    font-weight: 400px !important;
+
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+/* Card Effects */
+.card-img-overlay {
+    opacity: 0;
+
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* New page  */
+
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+
+/* Edit page */
+
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+  
+
+/* show page */
+
+.show-img {
+    height: 30vh;
+
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+/* Review Cards */
+.card {
+    overflow: hidden;
+}
+
+.review-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.review-card .card-body {
+    padding: 1rem;
+}
+
+.review-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.starability-result {
+    display: inline-block;
+    white-space: normal;   /* or remove this line */
+}
+
+
+/* map */
+
+#map { 
+    height: 400px;
+    width: 80vh;
+ }
+
+
+/* seach bar */
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem auto;
+            margin-right: 2rem;
+            width: 50%;
+        }
+        
+        .search-box {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #ddd;
+            border-radius: 2rem;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .search-box input:focus {
+            border-color: #fe424d;
+            box-shadow: 0 0 0 3px rgba(254, 66, 77, 0.1);
+        }
+        
+        .search-box i {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 1.1rem;
+        }

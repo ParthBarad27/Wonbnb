@@ -1,0 +1,21 @@
+1 . Ternary operator - for image
+set : (v) => v === "" ? link : v
+
+2. documentation of ejs
+
+3. documentation of express
+
+4. documentation of mongoose/mongodb
+
+5. understand each 
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded({extended: true}));
+app.use(methodOverride("_method"));
+
+6. documentation of ejs mate
+
+
+7. documentation of Bootstrap 
+
+8. passport authentication ** 
