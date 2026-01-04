@@ -440,7 +440,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️Parth**
+**Built with ❤️wonbnb**
 
 ![GitHub stars](https://img.shields.io/github/stars/ParthBarad27/Wonbnb)
 ![GitHub forks](https://img.shields.io/github/forks/ParthBarad27/Wonbnb)
